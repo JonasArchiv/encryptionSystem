@@ -1,4 +1,4 @@
-import encryptionSystem
+from encryptionSystem import encryptionSystem
 
 key = "HALLO"
 
