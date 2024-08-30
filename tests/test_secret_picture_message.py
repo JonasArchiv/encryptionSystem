@@ -11,7 +11,7 @@ def test_add_and_read_metadata():
         "And finally, let' look if it works!?"
     ]
 
-    image = Image.new('RGB', (100, 100), color='white')
+    image = Image.new('RGB', (100, 100), color='orange')
     image.save(input_image)
     print(f"Created test image: {input_image}")
 
