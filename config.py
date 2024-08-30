@@ -1,0 +1,3 @@
+SHIFT = 5
+BLOCK_SIZE = 6
+PADDING = '*'
