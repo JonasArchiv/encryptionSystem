@@ -59,3 +59,21 @@ def decrypt(text, key):
         decrypted_text += decrypt_block(block, matrix)
 
     return decrypted_text.strip(padding)
+
+
+def encrypt_file(input_file_path, output_file_path, key):
+    with open(input_file_path, 'r', encoding='utf-8') as file:
+        text = file.read()
+
+    encrypted_text = encrypt(text, key)
+    with open(output_file_path, 'w', encoding='utf-8') as file:
+        file.write(encrypted_text)
+
+
+def decrypt_file(input_file_path, output_file_path, key):
+    with open(input_file_path, 'r', encoding='utf-8') as file:
+        encrypted_text = file.read()
+
+    decrypted_text = decrypt(encrypted_text, key)
+    with open(output_file_path, 'w', encoding='utf-8') as file:
+        file.write(decrypted_text)
